@@ -1,0 +1,150 @@
+/* Default Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Variables */
+
+:root {
+  --main-light-blue: rgb(163, 216, 230);
+  --main-transparent-blue: rgba(4, 99, 122, 0.7);
+  --main-dark-blue: rgb(0, 83, 105);
+}
+
+/* Global Properties */
+
+html {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 62.5%;
+  background-color: var(--main-light-blue);
+  scroll-behavior: smooth;
+}
+
+
+/* Responsiveness Adjust Media Queries */
+
+@media (max-width: 160em) { /* 2560px - 4K Desktops */
+  html {
+    font-size: 82%;
+  }
+}
+
+@media (max-width: 90em) { /* 1440px - Regular Desktops */
+  html {
+    font-size: 76%;
+  }
+}
+
+@media (max-width: 64em) { /* 1024px - Laptops */
+  html {
+    font-size: 72%;
+  }
+}
+
+@media (max-width: 48em) { /* 768px - Tablets */
+  html {
+    font-size: 68%;
+  }
+}
+
+@media (max-width: 26.5625em) { /* 425px - Mobile L */
+  html {
+    font-size: 65%;
+  }
+}
+
+@media (max-width: 20em) { /* 320px - Mobile S */
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Header Properties */
+
+header {
+  height: 60vh;
+  background:
+  url('https://image.freepik.com/vector-gratis/lugar-trabajo-programador-escribir-codigo-computadora-portatil_80328-238.jpg') 50% 80%/cover no-repeat;
+  margin: 0;
+  padding: 0 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+header::after {
+  content: "";
+  background-color: var(--main-transparent-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+header h1 {
+  font-weight: bolder;
+  font-size: 5rem; /* 50px */
+  line-height: 5.4rem;
+  margin-bottom: 1.5rem;
+}
+
+header p {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+header a {
+  font-size: 3rem;
+  color: white;
+  margin-top: 4rem;
+}
+
+/* Previewer Properties */
+
+.preview-box {
+  background-color: var(--main-dark-blue);
+  width: 100px;
+  height: 100px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.input-label {
+  font-size: 1rem;
+  visibility: hidden;
+  position: absolute;
+}
+
+@media (max-width: 26.5625em) {
+  .input-label {
+    visibility: visible;
+    position: static;
+  }
+}
+
+.top-left-arrow { transform: rotate(315deg) }
+.top-right-arrow { transform: rotate(45deg) }
+.bottom-left-arrow { transform: rotate(225deg) }
+.bottom-right-arrow { transform: rotate(135deg) }
+
+#preview {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 12;
+  grid-template-rows: 5;
+  grid-area:
+}
