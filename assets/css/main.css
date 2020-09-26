@@ -11,6 +11,7 @@
   --main-light-blue: rgb(163, 216, 230);
   --main-transparent-blue: rgba(4, 99, 122, 0.7);
   --main-dark-blue: rgb(0, 83, 105);
+  --main-transparent-light-blue: rgba(224, 249, 255, 0.7);
 }
 
 /* Global Properties */
@@ -19,6 +20,7 @@ html {
   font-family: 'Titillium Web', sans-serif;
   font-size: 62.5%;
   background-color: var(--main-light-blue);
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -110,10 +112,52 @@ header a {
 
 /* Previewer Properties */
 
+section {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  weight: 100vw;
+  box-sizing: border-box;
+  padding: 5rem;
+}
+
+section h2 {
+  font-size: 4rem;
+}
+
+#preview {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
 .preview-box {
   background-color: var(--main-dark-blue);
-  width: 100px;
-  height: 100px;
+  grid-column: 2;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+}
+
+#top-left-input {
+  grid-column: 1;
+  grid-row: 1;
+}
+#top-right-input {
+  grid-column: 3;
+  grid-row: 1;
+}
+#bottom-left-input {
+  grid-column: 1;
+  grid-row: 3;
+}
+#bottom-right-input {
+  grid-column: 3;
+  grid-row: 3;
 }
 
 .input-field {
@@ -121,6 +165,26 @@ header a {
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
+  text-align: center;
+}
+
+.input-number {
+  background-color: var(--main-transparent-light-blue);
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 1rem;
+}
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number:focus {
+  outline: none;
 }
 
 .input-label {
@@ -140,11 +204,3 @@ header a {
 .top-right-arrow { transform: rotate(45deg) }
 .bottom-left-arrow { transform: rotate(225deg) }
 .bottom-right-arrow { transform: rotate(135deg) }
-
-#preview {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 12;
-  grid-template-rows: 5;
-  grid-area:
-}
