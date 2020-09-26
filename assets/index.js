@@ -15,4 +15,8 @@ $(document).ready(function(){
     let radius = $(this).val() + "px";
     $(".preview-box").css("border-bottom-right-radius", radius);
   });
+  $('#copy-button').click(function(){
+    $("#top-left-radius").select();
+    document.execCommand("copy");
+  })
 });
